@@ -2,11 +2,54 @@
 .criminalsContainer {
     display: flex;
     flex-wrap: wrap;
+    background: #FFFAEA
 }
 
+.GlassdaleHeader {
+
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #F4C434;
+    transition: all .3s ease-in-out;
+    font-family: "Sinkin Sans",sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    color:rgb(89, 89, 92);
+    letter-spacing: 10px;
+
+}
+
+.GlassdaleLogo{
+    display: flex;
+    width: 75px;
+    background-color: #F4C434;
+    justify-content: space-between;
+}
+
+.filters {
+    align-items:left; 
+}
 .criminalsInfo {
     flex-basis: 16%;
-    border: dotted 1px rgb(0, 0, 0);
+    border: solid 3px  #F4C434;
     padding: 1em;
     margin: 1.5em;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+.criminalsInfo:hover {
+    background-color: #F4C434;
+    transition: all .5s ease-in-out;
+} 
+
+h2 {
+    font-family: "Sinkin Sans";
+    text-transform: uppercase;
+    font-size: .95rem;
+    line-height: 1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color:rgb(89, 89, 92);
 }
