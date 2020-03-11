@@ -1,18 +1,37 @@
 import { useCriminals } from "./CriminalProvider.js"
 import Criminal from "./criminal.js"
 
-const CriminalList = () => {
-
-    const contentElement = document.querySelector(".criminalsContainer")
+const contentElement = document.querySelector(".criminalsContainer")
+    const eventHub = document.querySelector(".container")
     
-    const criminalObjectArray = useCriminals()
+eventHub.addEventListener('crimeChosen', event => {
 
-    for (const criminalObject of criminalObjectArray) {
-     const criminalHTMLRepresentation= Criminal(criminalObject)
+const criminals = useCriminals()
+    
+const selectedCrime = event.detail.crimeName
 
-     contentElement.innerHTML += criminalHTMLRepresentation
+const guiltyCriminals= criminals.filter(criminal => {
+        if (criminal.conviction === selectedCrime){
+         return true
+     }
+    return false 
+    })
+    
+    contentElement.innerHTML= ""
+
+    for (const singleCriminal of guiltyCriminals) {
+        contentElement.innerHTML += Criminal(singleCriminal)
+   
+       }
+})
+
+
+export const CriminalList = () => {
+
+    const criminals = useCriminals()
+
+    for (const singleCriminal of criminals){
+     contentElement.innerHTML += Criminal(singleCriminal)
     }
     
     }
-
-    export default CriminalList
