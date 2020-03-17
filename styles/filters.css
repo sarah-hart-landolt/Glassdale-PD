@@ -1,0 +1,9 @@
+.filters {
+    align-items:left; 
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}

@@ -4,7 +4,13 @@ import {CriminalList} from "./criminals/CriminalList.js";
 import {ConvictionSelect} from "./convictions/ConvictionSelect.js";
 import { getConvictions } from "./convictions/ConvictionProvider.js";
 import NoteForm from "./notes/NoteForm.js";
+import { DisplayNoteFormButton } from "./notes/DisplayNoteFormButton.js";
+import { DisplayNotesButton } from "./notes/DisplayNotesButton.js";
+import "./notes/NoteList.js"
 
 
 getOfficers()
 getCriminals().then(()=>NoteForm()).then(()=>CriminalList()).then(()=>getConvictions()).then(()=>ConvictionSelect())
+
+DisplayNotesButton()
+DisplayNoteFormButton()
