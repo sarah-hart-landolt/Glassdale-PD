@@ -1,0 +1,17 @@
+.criminalsInfo {
+    flex-basis: 16%;
+    border: solid 3px  #F4C434;
+    padding: 1em;
+    margin: 1.5em;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+.criminalsInfo:hover {
+    background-color: #F4C434;
+    transition: all .5s ease-in-out;
+} 
+
+.criminalsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background: #FFFAEA
+}

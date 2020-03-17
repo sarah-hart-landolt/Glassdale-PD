@@ -3,6 +3,20 @@ import { saveNote } from "./NoteDataProvide.js"
 
 
 const contentTarget = document.querySelector(".noteFormContainer")
+const eventHub = document.querySelector(".container")
+
+let visibility = false
+
+eventHub.addEventListener("noteFormButtonClicked", customEvent => {
+    visibility = !visibility
+
+    if (visibility) {
+        contentTarget.classList.remove("invisible")
+    }
+    else {
+        contentTarget.classList.add("invisible")
+    }
+})
 
 // Handle browser-generated click event in component
 contentTarget.addEventListener("click", clickEvent => {
