@@ -25,16 +25,16 @@
       "id": 4
     },
     {
-      "noteText": "",
-      "criminal": "",
-      "timestamp": 1584461760360,
-      "id": 5
-    },
-    {
       "noteText": "Steve seems to be acting strangely ",
       "criminal": "Steve ",
       "timestamp": 1584461981836,
       "id": 6
+    },
+    {
+      "criminal": "",
+      "noteText": "",
+      "timestamp": 1584551074812,
+      "id": 7
     }
   ]
 }
