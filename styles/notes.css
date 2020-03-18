@@ -1,3 +1,50 @@
 .invisible {
     display:none;
 }
+.notesContainer {
+    /* display: flex;
+    flex-wrap: wrap; */
+    background: rgb(245, 245, 245)
+}
+
+.note {
+    border: solid 3px  rgb(247, 199, 57);
+    padding: 1em;
+    margin: 1.5em;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+
+.noteFormContainer {
+    width: 300px;
+    margin: 30px;
+}
+#noteText {
+    padding: 20px;
+}
+
+#showAllNotes, #showNoteForm, #saveNote {
+    background:linear-gradient(to bottom, #d8d0b4 5%, #6c7c7c 100%);
+	background-color:#e8dbb3;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size:12px;
+	font-weight:bold;
+    padding:8px 18px;
+    margin: 10px;
+}
+    
+#showAllNotes:hover {
+	background:linear-gradient(to bottom, #d8cab2 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+
+#showNoteForm:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+.dropdown {
+    margin: 20px;
+}

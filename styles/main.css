@@ -49,5 +49,8 @@ h2 {
     flex-wrap: nowrap;
 }
 
-
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+}
 

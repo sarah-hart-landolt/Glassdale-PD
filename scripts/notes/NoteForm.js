@@ -27,8 +27,8 @@ contentTarget.addEventListener("click", clickEvent => {
 
         // Make a new object representation of a note
         const newNote = {
-            noteText: noteText,
             criminal: criminalName,
+            noteText: noteText,
             timestamp: Date.now()
         }
 
@@ -40,12 +40,12 @@ contentTarget.addEventListener("click", clickEvent => {
 const render = () => {
     contentTarget.innerHTML = `
         <fieldset>
-            <label for="noteText">Note:</label>
-            <input type="text" id="noteText">
-        </fieldset>
-        <fieldset>
             <label for="criminal">Criminal:</label>
             <input type="text" id="criminal">
+        </fieldset>
+        <fieldset>
+            <label for="noteText">Note:</label>
+            <input type="text" id="noteText">
         </fieldset>
         <button id="saveNote">Save Note</button>
     `
