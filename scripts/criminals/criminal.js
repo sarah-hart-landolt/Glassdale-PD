@@ -7,6 +7,8 @@ const Criminal = (criminalObject) => {
      <h2>Incarcertion</h2>
      <div> From: ${new Date(criminalObject.incarceration.start).toLocaleDateString('en-US')}</div>
      <div> To:  ${new Date(criminalObject.incarceration.end).toLocaleDateString('en-US')}</div>
+     <br>
+     <button id="associates--${criminalObject.id}">Show Associates</button>
     </div>
     `
 }
