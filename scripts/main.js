@@ -8,6 +8,8 @@ import { DisplayNoteFormButton } from "./notes/DisplayNoteFormButton.js";
 import { DisplayNotesButton } from "./notes/DisplayNotesButton.js";
 import "./notes/NoteList.js"
 import { NotesList } from "./notes/NoteList.js";
+import "./criminals/KnownAssociatesDialog.js"
+
 
 
 

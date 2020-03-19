@@ -22,7 +22,7 @@
     padding: 20px;
 }
 
-#showAllNotes, #showNoteForm, #saveNote {
+#showAllNotes, #showNoteForm, #saveNote, #button--close {
     background:linear-gradient(to bottom, #d8d0b4 5%, #6c7c7c 100%);
 	background-color:#e8dbb3;
 	border-radius:5px;

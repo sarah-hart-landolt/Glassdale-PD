@@ -31,7 +31,7 @@ const render = () => {
     contentTarget.classList.add("invisible")
 
     getNotes().then(() => {
-        const allTheNotes = useNotes()
+        const allTheNotes = useNotes().reverse()
 
         contentTarget.innerHTML = allTheNotes.map(
             currentNoteObject => {

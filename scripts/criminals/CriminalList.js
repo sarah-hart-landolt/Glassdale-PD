@@ -3,8 +3,26 @@ import Criminal from "./criminal.js"
 
 // targets html class 
 const contentElement = document.querySelector(".criminalsContainer")
+const contentTarget= document.querySelector(".criminalsContainer")
 // Get a reference to eventhub that holds html elements.
 const eventHub = document.querySelector(".container")
+
+contentTarget.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("associates--")) {
+        // Get the id of the criminal that was clicked
+        const [junk, criminalId] = clickEvent.target.id.split("--")
+
+        // Yell at the system that a known associates button was clicked
+        const showAssociatesEvent = new CustomEvent("knownAssociatesClicked", {
+            // Make sure to tell the system exactly which criminal button was clicked
+            detail: {
+                chosenCriminal: criminalId
+            }
+        })
+
+        eventHub.dispatchEvent(showAssociatesEvent)
+    }
+})
 
 // adds an event that is specifically listening for crimeChosen
 eventHub.addEventListener('crimeChosen', event => {
