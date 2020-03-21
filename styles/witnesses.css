@@ -1,0 +1,11 @@
+.witnessContainer {
+    background: rgb(254, 254, 238)
+}
+
+.witnessInfo {
+    flex-basis: 16%;
+    border: solid 3px  rgb(22, 22, 22);
+    padding: 1em;
+    margin: 1.5em;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
