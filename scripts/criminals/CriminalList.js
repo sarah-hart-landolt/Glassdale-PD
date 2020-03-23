@@ -6,9 +6,14 @@ const contentElement = document.querySelector(".criminalsContainer")
 const contentTarget= document.querySelector(".criminalsContainer")
 // Get a reference to eventhub that holds html elements.
 const eventHub = document.querySelector(".container")
+let visibility = true 
 
 eventHub.addEventListener("allWitnessesClicked", customEvent => {
-    contentElement.innerHTML = ""
+    visibility = !visibility
+
+    visibility
+        ? contentTarget.classList.remove("invisible")
+        : contentTarget.classList.add("invisible")
 })
 
 contentTarget.addEventListener("click", clickEvent => {
