@@ -6,6 +6,15 @@ const contentElement = document.querySelector(".criminalsContainer")
 const contentTarget= document.querySelector(".criminalsContainer")
 // Get a reference to eventhub that holds html elements.
 const eventHub = document.querySelector(".container")
+let visibility = true 
+
+eventHub.addEventListener("allWitnessesClicked", customEvent => {
+    visibility = !visibility
+
+    visibility
+        ? contentTarget.classList.remove("invisible")
+        : contentTarget.classList.add("invisible")
+})
 
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("associates--")) {
@@ -35,7 +44,6 @@ eventHub.addEventListener('crimeChosen', event => {
 // looping over the array of objects and printing each object to the page 
         for (const singleCriminal of criminals) {
             contentElement.innerHTML += Criminal(singleCriminal)
-
         }
 // if in the event, the crimeName is not equal to 0
     } else {

@@ -9,13 +9,15 @@ import { DisplayNotesButton } from "./notes/DisplayNotesButton.js";
 import "./notes/NoteList.js"
 import { NotesList } from "./notes/NoteList.js";
 import "./criminals/KnownAssociatesDialog.js"
+import { WitnessList } from "./witnesses/WitnessList.js";
+import { DisplayWitnessesButton } from "./witnesses/DisplayWitnessesButton.js";
 
 
 
 
 getOfficers()
-getCriminals().then(()=>NoteForm()).then(()=>CriminalList()).then(()=>getConvictions()).then(()=>ConvictionSelect())
-
+getCriminals().then(()=>NoteForm()).then(()=>CriminalList()).then(()=>getConvictions()).then(()=>ConvictionSelect()).then(()=>NotesList())
 DisplayNotesButton()
 DisplayNoteFormButton()
-NotesList()
+WitnessList()
+DisplayWitnessesButton()

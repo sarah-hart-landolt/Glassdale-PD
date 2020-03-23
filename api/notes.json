@@ -1,40 +1,16 @@
 {
   "notes": [
     {
-      "id": 1,
-      "noteText": "This person seems suspicious",
-      "timestamp": 1584382255712,
-      "criminal": "Taurean Bins"
+      "criminalId": 7,
+      "noteText": "sdfkljsdk;lf",
+      "timestamp": 1584987800009,
+      "id": 1
     },
     {
-      "noteText": "Madi is suspicious",
-      "criminal": "Madi Peper",
-      "timestamp": 1584384742515,
+      "criminalId": 5,
+      "noteText": "asdfadsjlk",
+      "timestamp": 1584996563102,
       "id": 2
-    },
-    {
-      "noteText": "Sarah is not longer suspicious",
-      "criminal": "Sarah",
-      "timestamp": 1584388467881,
-      "id": 3
-    },
-    {
-      "noteText": "jordan was spotted last night",
-      "criminal": "Jordan",
-      "timestamp": 1584388571286,
-      "id": 4
-    },
-    {
-      "noteText": "Steve seems to be acting strangely ",
-      "criminal": "Steve ",
-      "timestamp": 1584461981836,
-      "id": 6
-    },
-    {
-      "criminal": "",
-      "noteText": "",
-      "timestamp": 1584551074812,
-      "id": 7
     }
   ]
 }
