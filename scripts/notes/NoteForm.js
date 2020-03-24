@@ -1,4 +1,5 @@
 import { saveNote } from "./NoteDataProvide.js"
+import { useCriminals } from "../criminals/CriminalProvider.js"
 
 
 
@@ -23,11 +24,11 @@ contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
 
         const noteText = document.querySelector("#noteText").value
-        const criminalName = document.querySelector("#criminal").value
+        const criminalId = document.querySelector("#criminalDropdown").value
 
         // Make a new object representation of a note
         const newNote = {
-            criminalId: criminalName,
+            criminalId: parseInt(criminalId),
             noteText: noteText,
             timestamp: Date.now()
         }
@@ -38,10 +39,20 @@ contentTarget.addEventListener("click", clickEvent => {
 })
 
 const render = () => {
+    const allCriminals = useCriminals()
     contentTarget.innerHTML = `
         <fieldset>
             <label for="criminal">Criminal:</label>
-            <input type="text" id="criminal">
+            <select id="criminalDropdown">
+                <option value="0">Please choose a criminal...</option>
+                ${
+                    allCriminals.map(
+                        (currentCriminalObject) => {
+                            return `<option value="${currentCriminalObject.id}">${currentCriminalObject.name}</option>`
+                        }
+                    )
+                }
+            </select>
         </fieldset>
         <fieldset>
             <label for="noteText">Note:</label>
